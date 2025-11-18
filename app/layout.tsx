@@ -33,12 +33,16 @@ export default function RootLayout({
       <body
         className={`${urbanist.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex h-screen min-h-screen max-h-screen flex-col bg-zinc-50 font-sans dark:bg-black">
-          <div className="flex px-8 py-4 border-b dark:border-zinc-700 shadow bg-zinc-50 dark:bg-zinc-900 items-center justify-between">
-            <div className="text-2xl font-bold">Borders Varients</div>
-            <ThemeToggle />
+        <div className="h-screen relative max-h-screen bg-zinc-50 font-sans dark:bg-black flex flex-col">
+          <div className="flex z-50  w-full px-8 py-4 border-b dark:border-zinc-700 border-zinc-200  bg-white dark:bg-zinc-900 items-center justify-between">
+            <div className="text-2xl font-bold">
+              CSS Border Corner Shape Generator
+            </div>
+            {/* <ThemeToggle /> */}
           </div>
-          <div className="flex h-full">{children}</div>
+          <div className=" h-[calc(100vh-64px)] overflow-scroll">
+            {children}
+          </div>
         </div>
       </body>
     </html>

@@ -1,46 +1,23 @@
 import Image from "next/image";
 import CornerStyleSelectionPage from "./_components/CornerStyleSelectionPage";
 
-const cornerTypesVarient = [
-  {
-    name: "Round",
-    value: "round",
-  },
-  {
-    name: "Scoop",
-    value: "scoop",
-  },
-  {
-    name: "Bevel",
-    value: "bevel",
-  },
-  {
-    name: "Notch",
-    value: "notch",
-  },
-  {
-    name: "Square",
-    value: "square",
-  },
-  {
-    name: "Squircle",
-    value: "squircle",
-  },
-];
-
-const TypeSelection = ({
-  varient,
-}: {
-  varient: { name: string; value: string };
-}) => {
-  return (
-    <div>
-      <div className="w-42 h-42 border border-zinc-300 dark:border-neutral-700 rounded-lg"></div>
-      <div className="text-sm font-medium">{varient.name}</div>
-    </div>
-  );
-};
-
 export default function Home() {
-  return <CornerStyleSelectionPage />;
+  return (
+    <>
+      <CornerStyleSelectionPage />
+      <div className="py-24 flex items-center justify-center text-xs bg-linear-to-b from-white dark:from-black to-zinc-200 dark:to-zinc-900">
+        <p>
+          Made with ❤️ by{" "}
+          <a
+            href="https://madebyenigma.com"
+            target="_blank"
+            className="text-blue-800 dark:text-blue-100 hover:text-blue-100"
+            rel="noopener noreferrer"
+          >
+            Enigma
+          </a>
+        </p>
+      </div>
+    </>
+  );
 }
