@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "normalize.css";
 @import "@blueprintjs/core/lib/css/blueprint.css";
+
+/* @custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-background: #0a0a0a;
+}
+
+.light {
+  --color-background: #ffffff;
+} */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +35,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* :root {
+  --padding: 0px;
+  --border-radius: 90px;
+  --preview-box-width: 300px;
+  --preview-box-height: 300px;
+  --fallback-clip-path: polygon(
+    100% 50%,
+    99.37% 73.59%,
+    97.46% 82.93%,
+    94.21% 89.48%,
+    89.48% 94.21%,
+    82.93% 97.46%,
+    73.59% 99.37%,
+    50% 100%,
+    26.41% 99.37%,
+    17.07% 97.46%,
+    10.52% 94.21%,
+    5.79% 89.48%,
+    2.54% 82.93%,
+    0.63% 73.59%,
+    0% 50%,
+    0.63% 26.41%,
+    2.54% 17.07%,
+    5.79% 10.52%,
+    10.52% 5.79%,
+    17.07% 2.54%,
+    26.41% 0.63%,
+    50% 0%,
+    73.59% 0.63%,
+    82.93% 2.54%,
+    89.48% 5.79%,
+    94.21% 10.52%,
+    97.46% 17.07%,
+    99.37% 26.41%
+  );
+} */
+
+.corner-block {
+  border-radius: var(--border-radius);
+}
+
+.corner-shape-squircle {
+  /* corner-shape: squircle; */
+  /* clip-path: var(--fallback-clip-path); */
 }
